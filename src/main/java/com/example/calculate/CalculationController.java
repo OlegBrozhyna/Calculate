@@ -19,11 +19,8 @@ public class CalculationController {
     }
 
     @GetMapping
-    public ResponseEntity<Map<String, Integer>> calculate(
-            @RequestParam CalculationType type,
-            @RequestParam Integer x,
-            @RequestParam Integer y
-    ) {
+    public ResponseEntity<Map<String, Integer>> calculate(@RequestParam CalculationType type,@RequestParam Integer x, @RequestParam Integer y ) {
+            
         Integer result = calculationService.calculate(type, x, y);
         calculationService.save(type, x, y, result);
         Map<String, Integer> response = new HashMap<>();
