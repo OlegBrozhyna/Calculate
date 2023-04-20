@@ -14,10 +14,10 @@ public class Calculation {
     private CalculationType type;
 
     @Column(name = "x", nullable = false)
-    private Integer x=10;
+    private Integer x;
 
     @Column(name = "y", nullable = false)
-    private Integer y=20;
+    private Integer y;
 
     @Column(name = "result", nullable = false)
     private Integer result;
